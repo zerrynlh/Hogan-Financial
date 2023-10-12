@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell Your Stocks
+{% endblock %}
+
+{% block main %}
+
+<div style="margin-bottom: 20px; font-size: 40px;">
+    <h2>Sell Stocks</h2>
+</div>
+
+<div>
+    <form action="/sell" method="post" id="sellform">
+        <p style="margin-bottom: 7px;">Stock:</p>
+            <select style="margin-bottom: 10px;" id="sellstock" name="symbol" required>
+                <option autofocus disabled selected>Select a stock</option>
+                {% for row in ownedstocks %}
+                <option value="{{ row }}">{{ row }}</option>
+                {% endfor %}
+            </select>
+        <p style="margin-bottom: 8px;">Shares:</p>
+        <input id="sellstockshares" name="shares" type="number" autofocus required placeholder="Enter number of shares" min="1"
+        class="form-control mx-auto w-auto" style="margin-bottom: 15px;">
+    </form>
+    <button type="submit" id="sell" name="sell" form="sellform">Sell</button>
+</div>
+
+{% endblock %}

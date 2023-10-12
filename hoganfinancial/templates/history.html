@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<div class="container-fluid">
+    <h2>Transaction History</h2>
+    <div class="section table-responsive">
+        <table>
+            <thead>
+                <th>Transaction ID</th>
+                <th>Action</th>
+                <th>Stock</th>
+                <th>Stock Price</th>
+                <th>Number of Shares</th>
+                <th>Total Value</th>
+                <th>Date</th>
+                <th>Time</th>
+            </thead>
+            <tbody>
+                <tr>
+                    {% for row in thehistory%}
+                    <td>{{ row["id"] }}</td>
+                    <td>{{ row["method"] }}</td>
+                    <td>{{ row["stock_symbol"] }}</td>
+                    <td>{{ row["stock_price"] | usd }}</td>
+                    <td>{{ row["share_numbers"] }}</td>
+                    <td>{{ row["total_value"] | usd }}</td>
+                    <td>{{ row["transact_date"] }}</td>
+                    <td>{{ row["transact_time"] }}</td>
+                </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

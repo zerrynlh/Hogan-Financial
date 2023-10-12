@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+<div style="margin-bottom: 25px;">
+    <h2>"Stocks redefined, futures optimized: Your path to prosperity."</h2>
+</div>
+
+<form name="register" id="register" action="/register" method="post">
+    <p style="margin-bottom: 5px">Username</p>
+    <input autofocus id="createusername" name="username" placeholder="Username" type="text"
+        class="form-control mx-auto w-auto" style="margin-bottom: 10px;">
+    <p id="usermessage" style="color: red"></p>
+
+    <p style="margin-bottom: 5px">Password</p>
+    <input autofocus id="createpassword" name="password" placeholder="Password" type="password"
+        class="form-control mx-auto w-auto" style="margin-bottom: 10px">
+    <p id="passwordmessage1" style="color: red;"></p>
+
+    <p style="margin-bottom: 5px">Confirm Password</p>
+    <input autofocus id="confirmpassword" name="confirmation" placeholder="Confirm password" type="password"
+        class="form-control mx-auto w-auto" style="margin-bottom: 10px">
+    <p id="passwordmessage2" style="color: red;"></p>
+
+    <button type="submit" id="registered">Register</button>
+</form>
+
+{% endblock %}

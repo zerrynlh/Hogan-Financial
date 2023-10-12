@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted Stock Price
+{% endblock %}
+
+{% block main %}
+<div class="container-fluid">
+    <div class="section">
+        <table>
+            <thead>
+                <tr>
+                    <th>Stock Name</th>
+                    <th>Stock Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ thequotes["name"] }}</td>
+                    <td>{{ thequotes["price"] | usd }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Portfolio
+{% endblock %}
+
+{% block main %}
+
+<div style="margin-bottom: 25px;">
+    <h1 style="text-shadow: 2px 0px 8px white;">Welcome, {{ usergreeting }}!</h1>
+</div>
+
+<div class="container-fluid">
+    <h3 style="margin-bottom: 15px;">Portfolio</h3>
+    <div class="section table-responsive">
+        <table>
+            <thead>
+                <th>Stock</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total Value</th>
+                <th>Options</th>
+            </thead>
+            <tbody>
+                    {% for row in theportfolio %}
+                <tr>
+                    <td>{{ row["thesymbol"] }}</td>
+                    <td>{{ row["theshares"] }}</td>
+                    <td>{{ row["theprice"] | usd }}</td>
+                    <td>{{ row["thevalue"] | usd }}</td>
+                    <td>
+                        <a href="/buy"><button>Buy</button></a>
+                        <a href="/sell"><button>Sell</button></a>
+                    </td>
+                </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
+            <table>
+                <thead>
+                    <th>Cash Balance</th>
+                    <th>Grand Total</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ cash | usd }}</td>
+                        <td>{{ grand_total | usd }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

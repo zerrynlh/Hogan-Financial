@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy Stocks
+{% endblock %}
+
+{% block main %}
+
+<div style="margin-bottom: 20px; font-size: 40px;">
+    <h2>Purchase Stocks</h2>
+</div>
+
+<div>
+    <form action="/buy" method="post" id="buyform">
+        <p style="margin-bottom: 8px;">Stock:</p>
+        <input id="symbol2" name="symbol" type="text" autofocus required placeholder="Enter stock name"
+        class="form-control mx-auto w-auto" style="margin-bottom: 15px;">
+        <p style="margin-bottom: 8px;">Shares:</p>
+        <input id="shares" name="shares" type="number" autofocus required placeholder="Enter number of shares" min="1"
+        class="form-control mx-auto w-auto" style="margin-bottom: 15px;">
+    </form>
+    <button type="submit" id="buy" name="buy" form="buyform">Buy</button>
+</div>
+
+{% endblock %}
