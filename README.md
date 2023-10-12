@@ -10,8 +10,7 @@ The backend for this application was written using Python and the micro web fram
 This library can be installed via:
 >pip3 install CS50
 
-###
-Implementation:
+### Implementation:
 
 Upon visiting the site, users are directed to register. Form validation was manually added via JavaScript to set username and password requirements.
 
