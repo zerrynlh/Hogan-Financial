@@ -9,6 +9,7 @@ The backend for this application was written using Python and the micro web fram
 #### Installation:
 This library can be installed via:
 >pip3 install CS50
+>>pip3 install Flask
 
 ### Implementation:
 
