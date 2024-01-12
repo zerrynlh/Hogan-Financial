@@ -1,6 +1,8 @@
 # Hogan-Financial
 Stock trading simulation app
 
+![Hogan Financial Image:](https://github.com/zerrynlh/BidBay/blob/main/commerce/auctions/static/images/bidbay3.png)
+
 ### Description:
 This project is a web-based application called Hogan Financial that simulates the buying and selling of stocks.
 
@@ -9,8 +11,9 @@ The backend for this application was written using Python and the micro web fram
 #### Installation:
 Libraries can be installed via:
 >pip3 install CS50
->
->pip3 install Flask
+
+#### Install dependencies:
+>pip install -r requirements.txt
 
 #### To run the application:
 >flask run
