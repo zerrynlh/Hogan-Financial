@@ -7,10 +7,13 @@ This project is a web-based application called Hogan Financial that simulates th
 The backend for this application was written using Python and the micro web framework Flask. Information such as usernames, passwords and transaction history are stored in a SQLite database. The CS50 library was used for handling CRUD operations within the database.
 
 #### Installation:
-This library can be installed via:
+Libraries can be installed via:
 >pip3 install CS50
 >
 >pip3 install Flask
+
+#### To run the application:
+>flask run
 
 ### Implementation:
 
