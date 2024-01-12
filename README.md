@@ -1,7 +1,7 @@
 # Hogan-Financial
 Stock trading simulation app
 
-![Hogan Financial Image:](https://github.com/zerrynlh/BidBay/blob/main/commerce/auctions/static/images/bidbay3.png)
+![Hogan Financial Image:](https://github.com/zerrynlh/Hogan-Financial/blob/main/hoganfinancial/hf-home.jpg)
 
 ### Description:
 This project is a web-based application called Hogan Financial that simulates the buying and selling of stocks.
