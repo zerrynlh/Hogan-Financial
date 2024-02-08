@@ -3,22 +3,28 @@ Stock trading simulation app
 
 ![Hogan Financial Image:](https://github.com/zerrynlh/Hogan-Financial/blob/main/hoganfinancial/hf-home.jpg)
 
-### Description:
+## Description:
 This project is a web-based application called Hogan Financial that simulates the buying and selling of stocks.
 
 The backend for this application was written using Python and the micro web framework Flask. Information such as usernames, passwords and transaction history are stored in a SQLite database. The CS50 library was used for handling CRUD operations within the database.
 
 #### Installation:
 Libraries can be installed via:
->pip3 install CS50
+```
+pip3 install CS50
+```
 
 #### Install dependencies:
->pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
 
 #### To run the application:
->flask run
+```
+flask run
+```
 
-### Implementation:
+## Implementation:
 
 Upon visiting the site, users are directed to register. Form validation was manually added via JavaScript to set username and password requirements.
 
